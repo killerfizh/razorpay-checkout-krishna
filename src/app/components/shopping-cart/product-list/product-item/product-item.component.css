@@ -1,0 +1,12 @@
+.card{
+    border-radius: 10px;
+}
+i {
+    color: #FFD700;
+    padding: 0 5px;
+  }
+
+  #tbl{
+      margin-left: -10px;
+      font-size: 14px;
+  }

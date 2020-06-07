@@ -1,0 +1,47 @@
+<div class="card mb-4 shadow-sm">
+  <img class="bd-placeholder-img card-img-top p-2" width="100%" src="https://cdn.pixabay.com/photo/2016/10/10/14/46/icon-1728552_1280.jpg" />
+
+  <div class="card-body">
+    
+    <p class="card-text">{{ productItem.product_name }}</p>
+    <p class="card-text">({{productItem.product_adjective}})</p>
+    <p>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+    </p>
+    <p class="card-text">
+      <strong>{{ productItem.product_price | currency:'INR' }}</strong>
+    </p>
+    <div *ngIf = "!detailsHidden">
+    <table class="table table-sm" id="tbl">
+      <tr>
+        <td><strong>Department:</strong></td>
+        <td>{{productItem.department}}</td>
+      </tr>
+      <tr>
+        <td><strong>Material:</strong></td>
+        <td>{{productItem.product_material}}</td>
+      </tr>
+      <tr>
+        <td><strong>Product:</strong></td>
+        <td>{{productItem.product}}</td>
+      </tr>
+      <tr>
+        <td><strong>Color:</strong></td>
+        <td>{{productItem.product_color}}</td>
+      </tr>
+    </table>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-primary product-btn rounded" (click)="handleAddToCart()">Add to
+          Cart</button>
+        <button type="button" class="btn btn-sm btn-outline-dark product-btn ml-4 rounded" (click) = "viewDetails()">More</button>
+      </div>
+    </div>
+  </div>
+</div>

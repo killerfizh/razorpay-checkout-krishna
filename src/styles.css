@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background:  linear-gradient(150deg,  rgb(23, 23, 26) 15%, #2a3147 70%, #1e1e2c 94%);
+}
+.cart-item {
+  font-size: small;
+}
+
+.filters {
+  font-size: small;
+}
+
+.card, .form-control, .btn {
+  border-radius: 0;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.product-btn {
+  font-size: smaller;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

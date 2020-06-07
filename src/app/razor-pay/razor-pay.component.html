@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3>Total Amount</h3>
+                    <h1 class="mb-4">{{totalAmount | currency:"INR"}}</h1>
+                    <button class="btn btn-primary" (click)="initPay()">Pay with Razorpay</button>
+                </div>
+                <div class="card-body text-center">
+                    <button class="btn btn-outline-danger rounded" (click) = "return()">return to myKart</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+

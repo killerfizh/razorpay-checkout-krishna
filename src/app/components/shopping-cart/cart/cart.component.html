@@ -1,0 +1,23 @@
+<div class="insider">
+  <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+  <ul *ngIf="cartItems.length > 0" class="list-group">
+    <li class="list-group-item active btn-success" id="final" (click) = "getBilled()">
+      <strong>CHECKOUT</strong> <h1>{{ cartTotal | currency:'INR' }}</h1>
+    </li>
+    
+    <div *ngFor="let item of cartItems; let i = index">
+      <li class="list-group-item" *ngIf = "!isHidden">
+        <app-cart-item [cartItem]="item"></app-cart-item><p (click) = "clear(i)">Delete Item</p>
+      </li>
+    </div>
+   
+    
+    <li class="mt-4">
+      <button class="btn btn-outline-primary" (click) = "showDiv()">Items</button>
+    </li>
+
+  </ul>
+ 
+</div>
+
