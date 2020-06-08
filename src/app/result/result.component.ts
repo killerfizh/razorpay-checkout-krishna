@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ResultComponent implements OnInit {
   obtData;
-  constructor(private amt:PaymentInfoService, private router:Router, private toaster:ToastrService) {this.obtData = this.amt.details }
+  constructor(public amt:PaymentInfoService, private router:Router, private toaster:ToastrService) {this.obtData = this.amt.details }
  
   ngOnInit() {
     
