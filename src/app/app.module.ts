@@ -19,6 +19,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     CartItemComponent,
     ProductItemComponent,
     RazorPayComponent,
-    DummyComponent
+    DummyComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,9 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 1000
+    }),
     MatDialogModule
   ],
   providers: [],

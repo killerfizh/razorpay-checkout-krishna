@@ -13,7 +13,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class RazorPayComponent implements OnInit {
   totalAmount = this.amt.totalAmount;
   rcpt_id: string = '1';
-	checkout_result;
+	
+  checkout_result;
   verified;
   lst = {}
   
@@ -61,6 +62,7 @@ export class RazorPayComponent implements OnInit {
 			let order_id = v['id'];
 			console.log(order_id);
 			this.openrazor(order_id);
+			
 		});
   }
   
@@ -103,11 +105,20 @@ export class RazorPayComponent implements OnInit {
 		this.http.post('http://localhost:8080/api/verify', data, { headers }).subscribe((v) => {
 			if (v) {
 				console.log(v);
+				console.log(this.amt.details)
 				this.verified = true;
+				
 			} else {
 				this.verified = false;
 			}
 		});
+		
+		this.zone.run(()=> {
+			this.toaster.success("Payment Successful")
+			this.amt.getDetails(data)
+			this.router.navigate(["/result"])
+		})
+		
 	}
 
 

@@ -9,7 +9,7 @@ import { PaymentInfoService } from './payment-info.service';
 export class LinkRazorpayGuard implements CanActivate {
   constructor(private amt:PaymentInfoService, private router:Router){}
   canActivate():boolean {
-    if (this.amt.isValid){
+    if (this.amt.isValid || this.amt.detailsValid){
       return true;
     }
     else{
