@@ -51,7 +51,7 @@ export class RazorPayComponent implements OnInit {
   public initPay() {
    
 		let data = {
-      amount: this.amt.totalAmount*100,
+      		amount: this.amt.totalAmount*100,
 			currency: 'INR',
 			receipt: this.rcpt_id,
 			payment_capture: 1
@@ -67,7 +67,7 @@ export class RazorPayComponent implements OnInit {
 
 	openrazor(id) {
 		let options = {
-			key: 'rzp_live_eH6oSFaPlWJcF8', 
+			key: 'rzp_test_RiRbgKQDLZSb0y', 
 			amount: this.amt.totalAmount*100, 
 			currency: 'INR',
 			name: 'Krishna',

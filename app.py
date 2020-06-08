@@ -16,8 +16,8 @@ def hmac_sha256(val, key):
     return h
 
 
-razorpay_key = 'rzp_live_eH6oSFaPlWJcF8'
-razorpay_secret = 'hqcxidhxGXoXZz7ax9WVnxvs'
+razorpay_key = 'rzp_test_RiRbgKQDLZSb0y'
+razorpay_secret = '3bz5iyhTrUh3G2tXUzdNhxKz'
 rzpay = razorpay.Client(auth=(razorpay_key, razorpay_secret))
 
 
