@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ResultComponent } from './result/result.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ResultComponent } from './result/result.component';
     ProductItemComponent,
     RazorPayComponent,
     DummyComponent,
-    ResultComponent
+    ResultComponent,
+ 
   ],
   imports: [
     BrowserModule,

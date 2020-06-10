@@ -16,6 +16,7 @@ export class ProductItemComponent implements OnInit {
   detailsHidden = true;
 
   ngOnInit() {
+    
   }
 
   handleAddToCart() {

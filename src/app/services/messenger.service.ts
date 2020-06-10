@@ -6,12 +6,14 @@ import { Subject } from 'rxjs'
 })
 export class MessengerService {
 
+  res = [];
+
   subject = new Subject()
 
   constructor() { }
 
   sendMsg(product) {
-    this.subject.next(product) //Triggering an event
+    this.subject.next(product) 
   }
 
   getMsg() {

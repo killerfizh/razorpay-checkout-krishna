@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { ProductService } from 'src/app/services/product.service'
 import { Product } from 'src/app/models/product';
@@ -8,16 +8,22 @@ import { Product } from 'src/app/models/product';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit,OnDestroy {
 
   productList: Product[] = []
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) { 
+    
+  }
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.productList = products;
     })
+  }
+
+  ngOnDestroy(){
+    console.log("sasas")
   }
 
 }

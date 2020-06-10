@@ -30,7 +30,7 @@ export class RazorPayComponent implements OnInit {
     private amt: PaymentInfoService,
     private router: Router,
     private toaster:ToastrService,
-    private http:HttpClient
+    private http:HttpClient,
   ) {
     this.totalAmount = this.amt.totalAmount;
     console.log(this.totalAmount)
@@ -39,7 +39,7 @@ export class RazorPayComponent implements OnInit {
 
   return(){
     if (confirm("Do you wish to go back?")){
-	  this.router.navigate(["/"]);
+	  this.router.navigate(["shop"]);
 	  this.toaster.success("Redirected successfully")
     }
      
@@ -69,7 +69,7 @@ export class RazorPayComponent implements OnInit {
 
 	openrazor(id) {
 		let options = {
-			key: 'rzp_test_RiRbgKQDLZSb0y', 
+			key: 'rzp_live_eH6oSFaPlWJcF8', 
 			amount: this.amt.totalAmount*100, 
 			currency: 'INR',
 			name: 'Krishna',
@@ -80,11 +80,7 @@ export class RazorPayComponent implements OnInit {
 			handler: (response) => {
 				this.checkout_end(response);
 			},
-			prefill: {
-				name: 'Krishna Kompalli',
-				email: 'kompalligk@gmail.com',
-				contact: '9952090215'
-			},
+		
 			notes: {
 				address: 'Razorpay Corporate Office'
 			},
