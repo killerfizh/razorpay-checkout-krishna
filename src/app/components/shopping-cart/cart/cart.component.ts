@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   isHidden = true;
 
-  constructor(private msg: MessengerService, private amt:PaymentInfoService, private router:Router, private cs:CartServiceService) {
+  constructor(private msg: MessengerService, private amt:PaymentInfoService, private router:Router, public cs:CartServiceService) {
     
    }
 
